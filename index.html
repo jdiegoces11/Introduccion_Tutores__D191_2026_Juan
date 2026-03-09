@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tutorías Universitarias</title>
+  <link rel="stylesheet" href="css/estilos.css"/>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-logo-icon">🎓</div>
+      <div>
+        <div class="nav-logo-text">Tutorías Universitarias</div>
+        <div class="nav-logo-sub">Portal Académico</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#" class="active">Inicio</a>
+      <a href="#">Mis Tutorías</a>
+      <a href="#">Calendario</a>
+      <a href="#">Soporte</a>
+    </div>
+    <div class="nav-right">
+      <div class="avatar">AS</div>
+      <span class="nav-user-name">Ana Sofía López</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-inner">
+      <div>
+        <h1>Agenda tu Tutoría</h1>
+        <p>Encuentra el tutor ideal y reserva tu sesión en minutos.</p>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">24</div><div class="stat-label">Tutores activos</div></div>
+        <div class="stat"><div class="stat-num">8</div><div class="stat-label">Materias</div></div>
+        <div class="stat"><div class="stat-num">142</div><div class="stat-label">Sesiones este mes</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="tabs-bar">
+    <div class="tab active">🔍 Ver Tutores Disponibles</div>
+    <div class="tab">📅 Mis Tutorías</div>
+    <div class="tab">👤 Mi Perfil</div>
+  </div>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="main">
+
+    <!-- SIDEBAR FILTROS -->
+    <div class="sidebar">
+      <div class="card">
+        <div class="card-title">Filtros</div>
+        <div class="filter-group">
+          <label class="filter-label">Buscar tutor</label>
+          <input class="filter-input" type="text" placeholder="Nombre o apellido…"/>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Materia</label>
+          <select class="filter-select">
+            <option>Todas las materias</option>
+            <option>Cálculo</option>
+            <option>Programación</option>
+            <option>Física</option>
+            <option>Estadística</option>
+            <option>Álgebra</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Disponibilidad</label>
+          <div class="filter-chips">
+            <div class="chip active" onclick="this.classList.toggle('active')">Hoy</div>
+            <div class="chip" onclick="this.classList.toggle('active')">Esta semana</div>
+            <div class="chip" onclick="this.classList.toggle('active')">Mañana</div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Modalidad</label>
+          <div class="filter-chips">
+            <div class="chip active" onclick="this.classList.toggle('active')">Presencial</div>
+            <div class="chip" onclick="this.classList.toggle('active')">Virtual</div>
+            <div class="chip" onclick="this.classList.toggle('active')">Ambas</div>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label class="filter-label">Calificación mínima</label>
+          <select class="filter-select">
+            <option>Cualquiera</option>
+            <option>⭐⭐⭐⭐⭐ 5.0</option>
+            <option>⭐⭐⭐⭐ 4.0+</option>
+          </select>
+        </div>
+        <button class="btn-filter">Aplicar filtros</button>
+      </div>
+    </div>
+
+    <!-- TARJETAS DE TUTORES -->
+    <div class="content">
+      <div class="content-header">
+        <div>
+          <div class="content-title">Tutores Disponibles</div>
+          <div class="content-count">Mostrando 4 de 24 tutores</div>
+        </div>
+        <select class="sort-select">
+          <option>Mejor calificados</option>
+          <option>Más disponibilidad</option>
+          <option>A-Z</option>
+        </select>
+      </div>
+
+      <div class="tutor-grid">
+
+        <!-- Tutor 1 -->
+        <div class="tutor-card">
+          <div class="tutor-header">
+            <div class="tutor-avatar">CM</div>
+            <div class="tutor-info">
+              <div class="tutor-name">Carlos Martínez</div>
+              <div class="tutor-dept">Ing. de Sistemas · Sem. 9</div>
+              <div class="tutor-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-num">4.9</span>
+                <span class="rating-count">(38 reseñas)</span>
+              </div>
+            </div>
+            <span class="badge badge-available">Disponible</span>
+          </div>
+          <div class="tutor-subjects">
+            <span class="subject-tag">Programación</span>
+            <span class="subject-tag">Algoritmos</span>
+            <span class="subject-tag">Python</span>
+          </div>
+          <div class="tutor-meta">
+            <span>📍 Sala B-204</span>
+            <span>🕐 Lun–Vie 2–6pm</span>
+            <span>💻 Virtual</span>
+          </div>
+          <div class="tutor-footer">
+            <button class="btn-outline">Ver perfil</button>
+            <button class="btn-primary" onclick="openModal('Carlos Martínez','Ing. de Sistemas · Sem. 9','CM')">Agendar</button>
+          </div>
+        </div>
+
+        <!-- Tutor 2 -->
+        <div class="tutor-card">
+          <div class="tutor-header">
+            <div class="tutor-avatar">LR</div>
+            <div class="tutor-info">
+              <div class="tutor-name">Laura Rodríguez</div>
+              <div class="tutor-dept">Matemáticas · Sem. 10</div>
+              <div class="tutor-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-num">5.0</span>
+                <span class="rating-count">(51 reseñas)</span>
+              </div>
+            </div>
+            <span class="badge badge-available">Disponible</span>
+          </div>
+          <div class="tutor-subjects">
+            <span class="subject-tag">Cálculo I</span>
+            <span class="subject-tag">Cálculo II</span>
+            <span class="subject-tag">Álgebra</span>
+          </div>
+          <div class="tutor-meta">
+            <span>📍 Sala A-101</span>
+            <span>🕐 Mar–Jue 8–12pm</span>
+            <span>💻 Virtual</span>
+          </div>
+          <div class="tutor-footer">
+            <button class="btn-outline">Ver perfil</button>
+            <button class="btn-primary" onclick="openModal('Laura Rodríguez','Matemáticas · Sem. 10','LR')">Agendar</button>
+          </div>
+        </div>
+
+        <!-- Tutor 3 -->
+        <div class="tutor-card">
+          <div class="tutor-header">
+            <div class="tutor-avatar">JP</div>
+            <div class="tutor-info">
+              <div class="tutor-name">Jorge Peña</div>
+              <div class="tutor-dept">Física · Sem. 8</div>
+              <div class="tutor-rating">
+                <span class="stars">★★★★☆</span>
+                <span class="rating-num">4.6</span>
+                <span class="rating-count">(22 reseñas)</span>
+              </div>
+            </div>
+            <span class="badge badge-busy">Ocupado hoy</span>
+          </div>
+          <div class="tutor-subjects">
+            <span class="subject-tag">Física I</span>
+            <span class="subject-tag">Física II</span>
+            <span class="subject-tag">Mecánica</span>
+          </div>
+          <div class="tutor-meta">
+            <span>📍 Lab. Física</span>
+            <span>🕐 Mié–Vie 2–5pm</span>
+            <span>🏫 Presencial</span>
+          </div>
+          <div class="tutor-footer">
+            <button class="btn-outline">Ver perfil</button>
+            <button class="btn-primary" onclick="openModal('Jorge Peña','Física · Sem. 8','JP')">Agendar</button>
+          </div>
+        </div>
+
+        <!-- Tutor 4 -->
+        <div class="tutor-card">
+          <div class="tutor-header">
+            <div class="tutor-avatar">VG</div>
+            <div class="tutor-info">
+              <div class="tutor-name">Valentina García</div>
+              <div class="tutor-dept">Estadística · Sem. 9</div>
+              <div class="tutor-rating">
+                <span class="stars">★★★★★</span>
+                <span class="rating-num">4.8</span>
+                <span class="rating-count">(29 reseñas)</span>
+              </div>
+            </div>
+            <span class="badge badge-available">Disponible</span>
+          </div>
+          <div class="tutor-subjects">
+            <span class="subject-tag">Estadística</span>
+            <span class="subject-tag">Probabilidad</span>
+            <span class="subject-tag">SPSS</span>
+          </div>
+          <div class="tutor-meta">
+            <span>📍 Sala C-310</span>
+            <span>🕐 Lun–Mié 10–2pm</span>
+            <span>💻 Virtual</span>
+          </div>
+          <div class="tutor-footer">
+            <button class="btn-outline">Ver perfil</button>
+            <button class="btn-primary" onclick="openModal('Valentina García','Estadística · Sem. 9','VG')">Agendar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL AGENDAR -->
+  <div class="modal-overlay" id="modalOverlay" onclick="if(event.target.id==='modalOverlay')closeModal()">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Agendar Tutoría</h2>
+        <button class="modal-close" onclick="closeModal()">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-tutor">
+          <div id="modalAvatar" class="tutor-avatar" style="width:48px;height:48px;font-size:15px;flex-shrink:0"></div>
+          <div>
+            <div class="modal-tutor-name" id="modalName"></div>
+            <div class="modal-tutor-dept" id="modalDept"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Materia a trabajar</label>
+          <select class="form-control">
+            <option>Selecciona la materia…</option>
+            <option>Programación I</option>
+            <option>Algoritmos</option>
+            <option>Cálculo I</option>
+            <option>Física I</option>
+            <option>Estadística</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Fecha</label>
+          <input type="date" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Hora disponible</label>
+          <div class="time-grid">
+            <div class="time-slot" onclick="selectTime(this)">8:00</div>
+            <div class="time-slot" onclick="selectTime(this)">9:00</div>
+            <div class="time-slot occupied">10:00</div>
+            <div class="time-slot" onclick="selectTime(this)">11:00</div>
+            <div class="time-slot selected" onclick="selectTime(this)">2:00</div>
+            <div class="time-slot" onclick="selectTime(this)">3:00</div>
+            <div class="time-slot" onclick="selectTime(this)">4:00</div>
+            <div class="time-slot occupied">5:00</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Modalidad</label>
+          <select class="form-control">
+            <option>Presencial</option>
+            <option>Virtual (Meet)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notas adicionales (opcional)</label>
+          <textarea class="form-control" rows="3" placeholder="Describe brevemente lo que necesitas trabajar…"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-cancel" onclick="closeModal()">Cancelar</button>
+        <button class="btn-confirm" onclick="confirmBooking()">✓ Confirmar Tutoría</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">✅ ¡Tutoría agendada correctamente!</div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
