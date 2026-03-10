@@ -1,5 +1,4 @@
 <?php
-// includes/header.php — Navbar común para todas las páginas
 require_once __DIR__ . '/sesion.php';
 $u = usuarioActual();
 ?>

@@ -1,10 +1,4 @@
--- =============================================
--- BASE DE DATOS: SISTEMA DE TUTORIAS
--- Ejecutar en phpMyAdmin o MySQL
--- =============================================
 
-CREATE DATABASE IF NOT EXISTS tutorias_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE tutorias_db;
 
 -- ---------------------------------------------
 -- TABLA: usuarios (estudiantes, tutores, admin)
