@@ -1,6 +1,8 @@
 <?php
-require_once 'includes/conexion.php';
-require_once 'includes/sesion.php';
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/conexion.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/sesion.php';
 
 // Si ya está logueado, redirigir
 if (estaLogueado()) {

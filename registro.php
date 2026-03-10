@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "Todos los campos son obligatorios.";
     } elseif ($contrasena !== $confirmar) {
         $error = "Las contraseñas no coinciden.";
-    } elseif (!str_ends_with($correo, '@uts.edu.co')) {
+    } elseif (substr($correo, -strlen('@uts.edu.co')) !== '@uts.edu.co') {
     $error = "Correo invalido";
     } elseif (strlen($contrasena) < 6) {
     $error = "La contraseña debe tener al menos 6 caracteres.";

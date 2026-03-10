@@ -1,7 +1,5 @@
 <?php
-// =============================================
-// FUNCIONES DE SESIÓN Y AUTENTICACIÓN
-// =============================================
+
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
